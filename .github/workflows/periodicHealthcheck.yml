@@ -1,14 +1,11 @@
 name: Periodic health check
 
 on:
-  push:
-    branches:
-      - master
-  # schedule:
-    # - cron: '30 5,17 * * *'
+  schedule:
+    - cron: '25/10 * * * *'
 
 jobs:
-  hello_world_job:
+  periodic_health_check:
     runs-on: ubuntu-18.04
     steps:
       - name: Check the deployed service URL
